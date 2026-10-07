@@ -1,6 +1,6 @@
 # Blog Admin (React)
 
-Admin panel for the DevOpsXLab Medium-style blog. Talks to the Go monolith ([iblog-monolith-go](https://github.com/DevOpsXLab/iblog-monolith-go), `:8080`) through `/api`.
+Admin panel for the iBlog Medium-style blog. Talks to the Go monolith ([iblog-monolith-go](https://github.com/iBlog/iblog-monolith-go), `:8080`) through `/api`.
 
 ## Stack
 

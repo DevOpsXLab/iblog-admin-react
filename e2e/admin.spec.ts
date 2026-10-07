@@ -50,7 +50,7 @@ test.describe
       await expect(page.getByRole("link", { name: `${title} v2` }).first()).toBeVisible();
       await page.getByRole("button", { name: `Delete: ${title} v2` }).click();
       await page.getByRole("alertdialog").getByRole("button", { name: "Delete" }).click();
-      await expect(page.getByText("No posts match these filters.")).toBeVisible();
+      await expect(page.getByText("No results for current filters")).toBeVisible();
 
       // delete category
       await page.getByRole("link", { name: "Categories" }).first().click();
@@ -131,7 +131,7 @@ test.describe
       await expect(row).toContainText("Suspended");
       await expect(row).toContainText("e2e suspension");
       await row.getByRole("button", { name: `Lift ban: @${username}` }).click();
-      await page.getByRole("alertdialog").getByRole("button", { name: "Lift ban" }).click();
+      await page.getByRole("alertdialog").getByRole("button", { name: "Lift sanction" }).click();
       // the dialog hides the page from the a11y tree, so wait for the result before asserting rows
       await expect(page.getByText(`Sanction lifted for @${username}`)).toBeVisible();
       await expect(page.getByRole("alertdialog")).toBeHidden();
